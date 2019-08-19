@@ -526,7 +526,7 @@ nav{
 
             > div{
                 display: flex;
-                flex-direction: flex-start;
+                justify-content: flex-start;
                 margin-top: 28px;
                 span,small{
                     font-size: 18px;
@@ -570,6 +570,70 @@ nav{
 
 
 // contact us end
+
+// footer starts
+
+.footer{
+    background: $footer-color;
+    padding: 40px 20px;
+
+    .center{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+
+    &-middleDiv, &-lastDiv, &-firstDiv{
+        display: flex;
+        flex-direction: column;
+        max-width: 30%;
+
+        button{
+            background: none;
+            border:none;
+            outline: 0;
+        }
+
+        h5{
+            font-size: 22px;
+            color: $over-color;
+            margin-bottom: 10px;
+        }
+
+      
+        p{
+            margin-top: 15px;
+            font-size: 16px;
+            color: $over-color;
+        }
+
+        a{
+            margin-top: 20px;
+        }
+    }
+
+    &-middleDiv{
+        button{
+            background: none;
+            outline: 0;
+            border:0;
+            font-size: 16px;
+            color: $over-color;
+            font-weight: 400;
+            margin-top: 8px;
+    
+            &:hover{
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+   
+}
+
+// footer ends
 
 
 

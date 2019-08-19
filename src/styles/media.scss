@@ -257,6 +257,63 @@
 
     // blog ends
 
+    // contact starts
+
+    .contact{
+        .form-box{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .company-information{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                > div{
+                    width: 100%;
+                }
+            }
+
+            form{
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+    }
+
+    // contact ends
+
+
+    // footer starts
+
+    .footer{
+
+        .center{
+
+            flex-wrap: wrap;
+        }
+
+        
+        &-firstDiv{
+            max-width: 100%;
+        }
+
+        &-middleDiv, &-lastDiv{
+            max-width: 40%;
+            h5{
+                margin-top: 50px;
+                font-size: 18px;
+                
+            }
+        }
+    }
+
+
+    // footer ends
+
+
 
 }
 

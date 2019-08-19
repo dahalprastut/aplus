@@ -453,7 +453,7 @@ nav .down-lists {
 }
 .contact .form-box .company-information > div {
   display: flex;
-  flex-direction: flex-start;
+  justify-content: flex-start;
   margin-top: 28px;
 }
 .contact .form-box .company-information > div span, .contact .form-box .company-information > div small {
@@ -484,6 +484,51 @@ nav .down-lists {
   max-width: 120px;
   display: inline-block;
   border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background: #2e2e2e;
+  padding: 40px 20px;
+}
+.footer .center {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-middleDiv, .footer-lastDiv, .footer-firstDiv {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
+.footer-middleDiv button, .footer-lastDiv button, .footer-firstDiv button {
+  background: none;
+  border: none;
+  outline: 0;
+}
+.footer-middleDiv h5, .footer-lastDiv h5, .footer-firstDiv h5 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-middleDiv p, .footer-lastDiv p, .footer-firstDiv p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+.footer-middleDiv a, .footer-lastDiv a, .footer-firstDiv a {
+  margin-top: 20px;
+}
+.footer-middleDiv button {
+  background: none;
+  outline: 0;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.footer-middleDiv button:hover {
+  color: #0776B2;
   cursor: pointer;
 }
 
@@ -604,6 +649,39 @@ nav .down-lists {
   }
   .blog .swiper-slide .cards > div .for-service-description p {
     font-size: 16px;
+  }
+
+  .contact .form-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .form-box .company-information {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .form-box .company-information > div {
+    width: 100%;
+  }
+  .contact .form-box form {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .footer .center {
+    flex-wrap: wrap;
+  }
+  .footer-firstDiv {
+    max-width: 100%;
+  }
+  .footer-middleDiv, .footer-lastDiv {
+    max-width: 40%;
+  }
+  .footer-middleDiv h5, .footer-lastDiv h5 {
+    margin-top: 50px;
+    font-size: 18px;
   }
 }
 @media (max-width: 360px) {
