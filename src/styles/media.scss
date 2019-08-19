@@ -1,0 +1,262 @@
+
+@media(max-width:1300px){
+
+    // for top starts
+
+    .top{
+        padding: 16px 20px;
+    }
+
+    // top ends
+
+    // nav starts
+
+    nav{
+        padding: 0 20px;
+    }
+
+    // nav ends
+
+    // services start
+
+
+    // services ends
+    .services, .courses{
+        .cards{
+            > div{
+                max-width: 48%;
+            }
+        }
+    }
+}
+
+@media(max-width: 850px){
+
+    // top starts
+    .top{
+        flex-wrap: wrap;
+
+        &-left{
+            flex-wrap: wrap;
+
+   
+        }
+
+       
+    }
+
+    // top ends
+
+    // for nav starts
+
+    nav{
+        ul{
+            display: none;
+        }
+
+        .down-lists{
+            display: block;
+            padding: 0 15px;
+        }
+    }
+
+    .mobile-nav{
+
+        .center{
+            flex-direction: column;
+        }
+        ul{
+            display: block;
+         
+            li:not(:last-child){
+                border-bottom: 1px solid $border-color;
+            }
+
+        }
+
+      
+    }
+
+    // nav ends
+
+    // banner starts
+
+    .banner{
+        .swiper-slide{
+
+            h1{
+                font-size: 38px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    // banner ends
+
+    // services start
+    .services, .courses{
+        .cards{
+            flex-direction: column;
+            > div{
+                max-width: 95%;
+            }
+        }
+    }
+
+    // services ends
+
+    // courses start
+    .hide-sell{
+        display: none;
+    }
+
+    // courses ends
+
+    // about starts
+
+    .about{
+        .about-container{
+            &__description{
+                &--counter__container{
+                    .counter{
+                        width: 80px;
+                        height: 80px;
+                        font-size: 30px;
+                        border:4px solid $primary-color;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+    // about ends
+
+ 
+}
+
+@media(max-width:620px){
+
+    // top starts
+
+    .top{
+        // font-size: 14px;
+        &-left{
+            &__email{
+                margin-left: 0;
+            }
+        }
+
+       
+
+    }
+
+    // top ends
+
+
+    // banner starts
+
+
+    .banner{
+        .swiper-slide{
+            img{
+                height: 500px;
+            }
+
+            h1{
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+
+    // banner ends
+
+
+    // about starts
+    .about{
+        padding:30px 20px;
+        .about-container{
+            flex-direction: column;
+            text-align: center;
+
+            &__image{
+                max-width: 100%;
+                // display: inline-block;
+                img{
+                    display: inline-block;
+                }
+            }
+            &__description{
+                max-width: 100%;
+                &--counter__container{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // about ends
+
+
+    // blog starts
+
+    .blog{
+        .swiper-slide{
+            max-width:300px;
+            height: 500px;
+            .cards{
+                >div{
+
+                    .for-service-image{
+                        img{
+                            height: 250px;
+                        }
+                    }
+                    .for-service-description{
+                        h4{
+                            font-size: 22px;
+                        }
+
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // blog ends
+
+
+}
+
+@media(max-width:360px){
+
+    // top starts
+
+    .top{
+        &-right{
+            flex-wrap:wrap; 
+        }
+    }
+
+    // top ends
+
+    // courses start
+    .courses{
+        .cards{
+            > div{
+                .for-service-description{
+                    h4{
+                        font-size: 20px;
+                        width: 200px;   
+                    }
+                }
+            }
+        }
+    }
+    // courses ends
+}

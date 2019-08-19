@@ -1,0 +1,457 @@
+@import './var.scss';
+@import './default.scss';
+
+
+// top start
+
+.top{
+    font-size: 18px;
+    color: $primary-color;
+    padding: 18px 0;
+
+    .icon{
+        font-size: 20px;
+    }
+ 
+    .center{
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+
+    &-left{
+        display: flex;
+        justify-content: flex-start;
+
+        & > div{
+            display: flex;
+            justify-content: flex-start;
+    
+            span{
+             
+
+                &.icon{
+                    margin-right: 5px;
+                }
+            }
+
+            
+        }
+        &__email{
+            margin-left: 24px;
+
+            &--actual-email{
+                text-decoration: underline;
+                color:$primary-color;
+            }
+         }
+    }
+
+
+    &-right{
+        display: flex;
+        justify-content: flex-start;
+
+        a{
+            color: $primary-color;
+            font-size: 26px;
+            margin-left: 16px;
+
+        }
+
+    }
+}
+
+
+// top ends
+
+// nav starts
+
+nav{
+    -webkit-box-shadow: 0px 6px 4px -2px rgba(132,132,132,1);
+    -moz-box-shadow: 0px 6px 4px -2px rgba(132,132,132,1);
+    box-shadow: 0px 6px 4px -2px rgba(132,132,132,1);
+    
+    .center{    
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .logo{
+        padding: 10px 0;
+        img{
+            display: block;
+        }
+    }
+
+    ul{
+        display: flex;
+        justify-content: flex-start;
+
+        li{
+            list-style: none;
+            margin-left: 18px;
+
+            a{
+                color: $secondary-color;
+                display: block;
+                height: 60px;
+                line-height: 60px;
+                font-size: 18px;
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+
+            .active{
+                color: $primary-color;
+            }
+        }
+    }
+
+    .down-lists{
+        display: none;
+    }
+}
+
+// nav ends
+
+// banner starts
+
+// .banner{
+//     background: url(../images/banner_1.jpg) center center no-repeat fixed;
+//     max-width: 100%;
+//     background-size: cover;
+
+//     position: relative;
+//     z-index: -1;
+//     .center{
+//         padding:0 20px;
+//         height: 500px;
+//         display: flex;
+//         align-items: center;
+//     }
+    
+//     h1{
+//         max-width: 42%;
+//         font-size: 51px;
+//         color: $over-color;
+//         letter-spacing: 1px;
+//     }
+// }
+
+.banner{
+    .swiper-container {
+        max-width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        position: relative;
+        // background-position: center;
+        // background-size: cover;
+
+        img{
+            width: 100%;
+            height: 700px;
+
+        }
+
+        h1{
+            max-width: 32%;
+            font-size: 51px;
+            color: $over-color;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+      }
+}
+
+// banner ends
+
+// services start
+
+.services{
+    padding: 30px 0 60px 0;
+    
+
+
+   
+}
+
+
+// services ends
+
+
+// courses start
+.courses{
+    padding: 30px 20px 40px 20px;
+    background: $secondary-bg-color;
+    text-align: center;
+    .filter{
+        display: inline-block;
+        .btn{
+            margin-top: 36px;
+            background: $over-color;
+            // padding: 0;
+            width: 200px;
+
+            margin-left: 10px;
+
+            &:hover{
+                background: $primary-color;
+                color: $over-color;
+                cursor: pointer;
+            }
+
+         
+        }
+
+        .act{
+            background: $primary-color;
+            color: $over-color;
+            margin-left: 0;
+            &:hover{
+
+                cursor: default;
+            }
+        }
+
+
+    }
+
+    .cards{
+        margin-top: 30px;
+        >div{
+            max-width: 30%;
+            background: $over-color;
+            padding:0px;
+
+            .for-service-description{
+                margin:30px;
+                h4{
+                    width: 300px;
+                    margin:auto;
+                    border: 1px solid $primary-color;
+                    border-radius: 300px;
+                    margin-top: -55px;
+                    position: relative;
+                    background: $over-color;
+                    z-index:100;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+
+            img{
+                width:100%;
+                height: 350px;
+            }
+        }
+    }
+}
+
+// courses ends
+
+// about start
+
+.about{
+    padding: 30px 20px 40px 20px;
+
+    .about-container{
+        display: flex;
+        justify-content: space-between;
+
+        &__image{
+            max-width: 40%;
+        }
+
+        &__description{
+            max-width: 60%;
+            margin-top: 35px;
+            font-size: 18px;
+
+            &--counter__container{
+               
+                margin-top:34px;      
+
+                display: flex;
+
+                justify-content: flex-start;
+                > div{
+                    text-align: center;
+                    strong{
+                        font-size: 28px;
+                        font-weight: 400;
+                    }
+                }
+                .counter{
+                    margin:20px;
+                    // display: table-cell;
+                    font-size:50px;
+                    background-color: $over-color;
+                    width:150px;
+                    border-radius: 50%;
+                    border:6px solid $primary-color;
+                    height:150px;
+                    // vertical-align: middle;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+        }
+    }
+}
+
+
+// about ends
+
+// blog starts
+.blog{
+    padding:30px 0 40px 0;
+    max-width: 100%;
+
+    h2{
+        color: $over-color;
+    }
+
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 500px;
+        height: 700px;
+        // background: #fff;
+
+        .cards{
+
+            >div{
+                max-width: 100%;
+                background: #fff;
+
+                
+                .for-service-image{
+                    text-align: center;
+                    img{
+                        display: inline-block;
+                        height: 350px;
+                        width: 100%;
+                    }
+                }
+
+                .for-service-description{
+                    span{
+                        display: block;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+// blog ends
+
+// testimonials start
+
+.testimonials{
+    padding: 30px 20px 40px 20px;
+    max-width: 100%;
+    
+    .swiper-second-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 500px;
+        height: 400px;
+        -webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+
+        .swiper-cards{
+            display: flex;
+            max-width: 100%;
+            position: relative;            
+            >div{
+                padding:120px 50px 45px 80px;
+
+                p{
+                    font-size: 18px;
+                }
+
+                h4{
+                    font-size: 26px;
+                    color: $primary-color;
+                    font-weight: 400;
+                    margin-top: 20px;
+
+                    span{
+                        color: $secondary-color;
+                        font-size: 14px;
+                        display: block;
+                    }
+                }
+            }
+
+            .absolute-image{
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                background: red;
+                position: absolute;
+                top: -35px;
+                left: 45%;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+            .testi-up, .testi-down{
+                position: absolute;
+                top:0;
+                left: 0;
+
+                img{
+                    height: 130px;
+
+                }
+            }
+
+            .testi-down{
+                top: auto;
+                left: auto;
+                right: 10%;
+                bottom: 0;
+            }
+            
+        }
+    }
+}
+
+// testimonials ends
+
+
+
+@import './media.scss';
+
