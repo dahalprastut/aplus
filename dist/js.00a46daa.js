@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
+},{"./..\\images\\banner_1.jpg":[["banner_1.eb76f141.jpg","images/banner_1.jpg"],"images/banner_1.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -20853,6 +20853,49 @@ var swiper = new _swiper.default('.swiper-second-container', {
     prevEl: '.swiper-button-prev'
   }
 }); // for testimonial ends
+// for clients start
+
+var swiper = new _swiper.default('.swiper-clients-container', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: false,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  grabCursor: true,
+  autoplay: {
+    delay: 4000
+  }
+});
+
+if (innerWidth <= 420) {
+  var swiper = new _swiper.default('.swiper-clients-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    grabCursor: true,
+    autoplay: {
+      delay: 4000
+    }
+  });
+} // for clients end
 //   for swiper ends
 },{"../styles/main.scss":"styles/main.scss","jquery":"../node_modules/jquery/dist/jquery.js","aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css","swiper":"../node_modules/swiper/dist/js/swiper.esm.bundle.js","swiper/dist/css/swiper.css":"../node_modules/swiper/dist/css/swiper.css","./variables":"js/variables.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

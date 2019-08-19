@@ -170,17 +170,69 @@ var swiper = new Swiper('.swiper-second-container', {
     effect: 'flip',
     autoplay: {
         delay: 2000,
-      },
-      grabCursor: true,
-      pagination: {
+    },
+    grabCursor: true,
+    pagination: {
         el: '.swiper-pagination',
-      },
-      navigation: {
+    },
+    navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+    },
+ 
 });
 
 // for testimonial ends
+
+
+// for clients start
+
+var swiper = new Swiper('.swiper-clients-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    grabCursor: true,
+    autoplay: {
+        delay: 4000,
+    }
+
+
+});
+
+  if(innerWidth <= 420){
+    var swiper = new Swiper('.swiper-clients-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        grabCursor: true,
+        autoplay: {
+            delay: 4000,
+        }
+    
+    
+    });
+  }
+
+// for clients end
 
 //   for swiper ends

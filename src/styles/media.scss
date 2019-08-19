@@ -133,6 +133,33 @@
 
     // about ends
 
+    // testimonials starts
+
+    .testimonials{
+        .swiper-slide{
+            .swiper-cards{
+                >div{
+                    padding: 80px 50px 35px 70px;
+                    p{
+                        font-size: 14px;
+                        
+                    }
+                }
+
+                .testi-up, .testi-down{
+                    img{
+                        height: 100px;
+                    }
+                }
+
+          
+            }
+        }
+    }
+
+    // testimonials ends
+
+
  
 }
 
@@ -166,7 +193,7 @@
 
             h1{
                 text-align: center;
-                font-size: 30px;
+                font-size: 22px;
             }
         }
     }
@@ -259,4 +286,31 @@
         }
     }
     // courses ends
+
+     // testimonials starts
+
+     .testimonials{
+        .swiper-slide{
+            .swiper-cards{
+                >div{
+                    padding: 80px 20px 35px 20px;
+                    p{
+                        font-size: 14px;
+                        
+                    }
+                }
+
+                .testi-up, .testi-down{
+                    img{
+                        height: 50px;
+                    }
+                }
+
+          
+            }
+        }
+    }
+
+    // testimonials ends
+
 }

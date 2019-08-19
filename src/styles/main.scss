@@ -294,10 +294,10 @@ nav{
                     // display: table-cell;
                     font-size:50px;
                     background-color: $over-color;
-                    width:150px;
+                    width:130px;
                     border-radius: 50%;
                     border:6px solid $primary-color;
-                    height:150px;
+                    height:130px;
                     // vertical-align: middle;
                     display: flex;
                     align-items: center;
@@ -380,7 +380,6 @@ nav{
         background-position: center;
         background-size: cover;
         width: 500px;
-        height: 400px;
         -webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
             -moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
             box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
@@ -441,8 +440,8 @@ nav{
             .testi-down{
                 top: auto;
                 left: auto;
-                right: 10%;
-                bottom: 0;
+                right: 0%;
+                bottom: 15%;
             }
             
         }
@@ -450,6 +449,102 @@ nav{
 }
 
 // testimonials ends
+
+
+// clients start
+
+.clients{
+    background: $secondary-bg-color;
+    padding: 30px 20px 40px 20px;
+
+    .clients-listing{
+
+        max-width: 100%;
+        overflow: hidden;
+        margin-top: 40px;
+
+        img{
+            height: 200px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+  
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+ 
+    }
+
+}
+
+
+// clients end
+
+
+// contact us start
+
+.contact{
+    padding: 30px 20px 40px 20px;
+    background: url('../images/banner_1.jpg') center center fixed no-repeat;
+    max-width:100%;
+    background-size: cover;
+
+    h2{
+        color:$over-color;    
+    }
+
+    .form-box{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .company-information{
+            display: flex;
+            flex-direction: column;
+            h5{
+                font-size: 30px;
+                color: $over-color;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+
+            > div{
+                display: flex;
+                flex-direction: flex-start;
+                margin-top: 28px;
+                span,small{
+                    font-size: 18px;
+                    color: $over-color;
+                }
+
+                span{
+                    font-size: 28px;
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+// contact us end
+
+
 
 
 
