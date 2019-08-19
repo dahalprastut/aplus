@@ -441,6 +441,7 @@ nav .down-lists {
   justify-content: space-between;
 }
 .contact .form-box .company-information {
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
@@ -462,6 +463,28 @@ nav .down-lists {
 .contact .form-box .company-information > div span {
   font-size: 28px;
   margin-right: 25px;
+}
+.contact .form-box form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .form-box form input, .contact .form-box form textarea {
+  margin-bottom: 22px;
+  padding: 0 10px;
+  height: 42px;
+  width: 100%;
+  font-size: 16px;
+}
+.contact .form-box form textarea {
+  height: auto;
+  max-width: auto;
+}
+.contact .form-box form input[type=submit] {
+  max-width: 120px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1300px) {
