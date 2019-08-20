@@ -10,8 +10,15 @@ import * as variables from './variables';
 
 
 
-variables.downBtn.addEventListener('click', ()=>{
+$(document).on('click', function (event) {
+//   ... clicked on the 'body', but not inside of #menutop
+    variables.navigation.classList.remove('mobile-nav');
+
+});
+$('.down-lists').on('click', function (event) {
+  event.stopPropagation();
     variables.navigation.classList.toggle('mobile-nav');
+  
 });
 
 // for nav
@@ -26,6 +33,105 @@ window.addEventListener('scroll', ()=>{
 
 })
 
+
+// scroll to from nav
+
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        // event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+
+ 
+    });
+    
+
+    //   $(".button-buy").click(function() {
+    //     $('html, body').animate({
+    //         scrollTop: $("#our-product").offset().top
+    //     }, 900);
+    // });
+    // });
+
+       $(".pointHome").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".banner").offset().top
+        }, 900);
+        $(variables.buttons).removeClass('active');
+        $('.pointHome').addClass('active');
+        
+        
+    });
+
+    $(".pointService").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".services").offset().top-70
+        }, 900);
+       
+        $(variables.buttons).removeClass('active');
+        $('.pointService').addClass('active');
+    });
+
+    $(".pointCourses").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".courses").offset().top-70
+        }, 900);
+        $(variables.buttons).removeClass('active');
+        $('.pointCourses').addClass('active');
+    });
+
+    $(".pointAbout").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".about").offset().top-70
+        }, 900);
+         $(variables.buttons).removeClass('active');
+        $('.pointAbout').addClass('active');
+    });
+    $(".pointBlog").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".blog").offset().top-70
+        }, 900);
+         $(variables.buttons).removeClass('active');
+        $('.pointBlog').addClass('active');
+    });
+    $(".pointContact").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".contact").offset().top-70
+        }, 900);
+         $(variables.buttons).removeClass('active');
+        $('.pointContact').addClass('active');
+    });
+
+    
+    // for toggle nav class
+
+    // for(let i=0 ; i < variables.buttons.length; i++){
+    //     console.log(variables.buttons[i]);
+    //     if(varibles.button[i])
+    // }
+
+     
+
+ 
+   
 
 
 
@@ -149,10 +255,7 @@ var swiper = new Swiper('.swiper-first-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    
   });
 
 // for banner swiper ends

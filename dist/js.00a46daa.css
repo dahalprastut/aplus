@@ -162,18 +162,24 @@ nav ul li {
   list-style: none;
   margin-left: 18px;
 }
-nav ul li a {
+nav ul li button {
+  border: none;
+  outline: 0;
+  background: none;
   color: #000;
   display: block;
   height: 60px;
   line-height: 60px;
   font-size: 18px;
+  cursor: pointer;
+  width: 100%;
 }
-nav ul li a:hover {
+nav ul li button:hover {
   color: #0776b2;
 }
 nav ul li .active {
   color: #0776b2;
+  cursor: default;
 }
 nav .down-lists {
   display: none;
@@ -188,7 +194,6 @@ nav .down-lists div {
 
 .banner .swiper-container {
   max-width: 100%;
-  height: 100%;
 }
 .banner .swiper-slide {
   position: relative;
@@ -207,8 +212,12 @@ nav .down-lists div {
   left: 10%;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  display: none;
+}
+
 .services {
-  padding: 30px 0 60px 0;
+  padding: 30px 20px 60px 20px;
 }
 
 .courses {
@@ -280,8 +289,8 @@ nav .down-lists div {
 .courses .cards > div strong {
   position: absolute;
   right: 0;
-  top: 5%;
-  background: #0776b2;
+  top: 0%;
+  background: rgba(7, 118, 178, 0.8);
   color: #fff;
   width: 40%;
   height: 50px;
@@ -344,7 +353,7 @@ nav .down-lists div {
 .blog .swiper-container {
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 62px;
 }
 .blog .swiper-slide {
   background-position: center;
@@ -616,11 +625,11 @@ nav .down-lists div {
   .mobile-nav ul li {
     margin-left: 0;
   }
-  .mobile-nav ul li a {
+  .mobile-nav ul li button {
     color: #fff;
     padding-left: 10px;
   }
-  .mobile-nav ul li a:hover, .mobile-nav ul li a:active {
+  .mobile-nav ul li button:hover, .mobile-nav ul li button:active {
     background: #fff;
     columns: #0776b2;
   }
@@ -633,6 +642,9 @@ nav .down-lists div {
       transform: translateY(0%);
     }
   }
+  .banner .swiper-slide img {
+    height: 500px;
+  }
   .banner .swiper-slide h1 {
     font-size: 38px;
     max-width: 100%;
@@ -642,7 +654,10 @@ nav .down-lists div {
     flex-direction: column;
   }
   .services .cards > div, .courses .cards > div {
-    max-width: 95%;
+    max-width: 100%;
+  }
+  .services .cards > div:not(first-child), .courses .cards > div:not(first-child) {
+    margin-left: 0;
   }
 
   .hide-sell {
@@ -675,10 +690,10 @@ nav .down-lists div {
   }
 
   .banner .swiper-slide img {
-    height: 500px;
+    height: 300px;
   }
   .banner .swiper-slide h1 {
-    text-align: center;
+    text-align: left;
     font-size: 22px;
   }
 
@@ -751,6 +766,7 @@ nav .down-lists div {
 }
 @media (max-width: 360px) {
   .top-right {
+    margin-left: 15px;
     flex-wrap: wrap;
   }
 

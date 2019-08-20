@@ -20679,13 +20679,15 @@ module.hot.accept(reloadCSS);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.heightTopNav = exports.about = exports.downBtn = exports.navigation = void 0;
+exports.heightTopNav = exports.buttons = exports.about = exports.downBtn = exports.navigation = void 0;
 var navigation = document.querySelector('nav');
 exports.navigation = navigation;
 var downBtn = document.querySelector('.down-lists');
 exports.downBtn = downBtn;
 var about = document.querySelector('.about').getBoundingClientRect().bottom;
 exports.about = about;
+var buttons = document.querySelectorAll('li button');
+exports.buttons = buttons;
 var heightTopNav = document.querySelector('nav').getBoundingClientRect().top;
 exports.heightTopNav = heightTopNav;
 },{}],"js/index.js":[function(require,module,exports) {
@@ -20709,7 +20711,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-variables.downBtn.addEventListener('click', function () {
+(0, _jquery.default)(document).on('click', function (event) {
+  //   ... clicked on the 'body', but not inside of #menutop
+  variables.navigation.classList.remove('mobile-nav');
+});
+(0, _jquery.default)('.down-lists').on('click', function (event) {
+  event.stopPropagation();
   variables.navigation.classList.toggle('mobile-nav');
 }); // for nav
 
@@ -20719,7 +20726,82 @@ window.addEventListener('scroll', function () {
   } else {
     variables.navigation.classList.remove('scrolledNav');
   }
-}); // for filter
+}); // scroll to from nav
+
+(0, _jquery.default)(document).ready(function () {
+  // Add smooth scrolling to all links
+  (0, _jquery.default)("a").on('click', function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      // event.preventDefault();
+      // Store hash
+      var hash = this.hash; // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+
+      (0, _jquery.default)('html, body').animate({
+        scrollTop: (0, _jquery.default)(hash).offset().top
+      }, 800, function () {
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+
+  });
+}); //   $(".button-buy").click(function() {
+//     $('html, body').animate({
+//         scrollTop: $("#our-product").offset().top
+//     }, 900);
+// });
+// });
+
+(0, _jquery.default)(".pointHome").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".banner").offset().top
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointHome').addClass('active');
+});
+(0, _jquery.default)(".pointService").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".services").offset().top - 70
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointService').addClass('active');
+});
+(0, _jquery.default)(".pointCourses").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".courses").offset().top - 70
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointCourses').addClass('active');
+});
+(0, _jquery.default)(".pointAbout").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".about").offset().top - 70
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointAbout').addClass('active');
+});
+(0, _jquery.default)(".pointBlog").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".blog").offset().top - 70
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointBlog').addClass('active');
+});
+(0, _jquery.default)(".pointContact").click(function () {
+  (0, _jquery.default)('html, body').animate({
+    scrollTop: (0, _jquery.default)(".contact").offset().top - 70
+  }, 900);
+  (0, _jquery.default)(variables.buttons).removeClass('active');
+  (0, _jquery.default)('.pointContact').addClass('active');
+}); // for toggle nav class
+// for(let i=0 ; i < variables.buttons.length; i++){
+//     console.log(variables.buttons[i]);
+//     if(varibles.button[i])
+// }
+// for filter
 
 (0, _jquery.default)(document).ready(function () {
   (0, _jquery.default)('.category-item').click(function () {
@@ -20822,10 +20904,6 @@ var swiper = new _swiper.default('.swiper-first-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
   }
 }); // for banner swiper ends
 
@@ -20936,7 +21014,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60853" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60209" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
