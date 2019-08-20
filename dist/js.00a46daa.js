@@ -20679,13 +20679,15 @@ module.hot.accept(reloadCSS);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.about = exports.downBtn = exports.navigation = void 0;
+exports.heightTopNav = exports.about = exports.downBtn = exports.navigation = void 0;
 var navigation = document.querySelector('nav');
 exports.navigation = navigation;
 var downBtn = document.querySelector('.down-lists');
 exports.downBtn = downBtn;
 var about = document.querySelector('.about').getBoundingClientRect().bottom;
 exports.about = about;
+var heightTopNav = document.querySelector('nav').getBoundingClientRect().top;
+exports.heightTopNav = heightTopNav;
 },{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -20709,6 +20711,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 variables.downBtn.addEventListener('click', function () {
   variables.navigation.classList.toggle('mobile-nav');
+}); // for nav
+
+window.addEventListener('scroll', function () {
+  if (scrollY >= 42) {
+    variables.navigation.classList.add('scrolledNav');
+  } else {
+    variables.navigation.classList.remove('scrolledNav');
+  }
 }); // for filter
 
 (0, _jquery.default)(document).ready(function () {
@@ -20826,6 +20836,7 @@ var swiper = new _swiper.default('.swiper-container', {
     delay: 4000
   },
   centeredSlides: true,
+  loop: true,
   slidesPerView: 'auto',
   coverflowEffect: {
     rotate: 50,

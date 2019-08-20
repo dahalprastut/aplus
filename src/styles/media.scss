@@ -32,6 +32,7 @@
 
 @media(max-width: 850px){
 
+
     // top starts
     .top{
         flex-wrap: wrap;
@@ -49,32 +50,69 @@
 
     // for nav starts
 
+
+
     nav{
+      
         ul{
             display: none;
         }
 
         .down-lists{
             display: block;
-            padding: 0 15px;
+            // flex: auto;
         }
     }
 
     .mobile-nav{
 
         .center{
-            flex-direction: column;
         }
         ul{
-            display: block;
-         
-            li:not(:last-child){
-                border-bottom: 1px solid $border-color;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 65px;
+            right: 0px;
+            background: rgba(7, 118, 178,0.7);
+            width: 100%;
+            z-index: 100;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            animation: animateNav 0.3s ease-in;
+
+            li{
+                margin-left: 0;
+                a{
+
+                    color: $over-color;
+                    padding-left: 10px;
+
+                    &:hover, &:active{
+                        background: $over-color;
+                        columns: $primary-color;
+                    }
+                }
+                
             }
+
+         
+        
 
         }
 
       
+    }
+
+    @keyframes animateNav{
+        0%{
+            transform: translateY(-30%)
+        }
+        100%{
+            transform: translateY(0%)
+        }
     }
 
     // nav ends
@@ -136,6 +174,7 @@
     // testimonials starts
 
     .testimonials{
+        padding:30px 20px 40px 20px;
         .swiper-slide{
             .swiper-cards{
                 >div{
@@ -266,7 +305,7 @@
             align-items: center;
 
             .company-information{
-                width: 100%;
+                max-width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;

@@ -14,6 +14,20 @@ variables.downBtn.addEventListener('click', ()=>{
     variables.navigation.classList.toggle('mobile-nav');
 });
 
+// for nav
+window.addEventListener('scroll', ()=>{
+
+    if(scrollY >= 42){
+        variables.navigation.classList.add('scrolledNav');
+    }else{
+        
+        variables.navigation.classList.remove('scrolledNav');
+    }
+
+})
+
+
+
 
 // for filter
 $(document).ready(function(){
@@ -151,6 +165,7 @@ var swiper = new Swiper('.swiper-container', {
         delay: 4000,
       },
     centeredSlides: true,
+    loop:true,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 50,

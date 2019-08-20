@@ -22,7 +22,7 @@ img {
 
 .btn {
   display: inline-block;
-  border: 1px solid #0776B2;
+  border: 1px solid #0776b2;
   outline: 0;
   padding: 12px;
   font-size: 18px;
@@ -32,7 +32,7 @@ img {
   -webkit-transition: 0.5s;
 }
 .btn:hover {
-  background: #0776B2;
+  background: #0776b2;
   border: 1px solid #fff;
   color: #fff;
 }
@@ -40,7 +40,7 @@ img {
 h2 {
   text-align: center;
   font-size: 40px;
-  color: #0776B2;
+  color: #0776b2;
   font-weight: 400;
 }
 
@@ -69,7 +69,7 @@ h2 {
 }
 .cards > div .for-service-description h4 {
   font-size: 26px;
-  color: #0776B2;
+  color: #0776b2;
 }
 .cards > div .for-service-description p {
   margin-top: 14px;
@@ -91,7 +91,7 @@ h2 {
 
 .top {
   font-size: 18px;
-  color: #0776B2;
+  color: #0776b2;
   padding: 18px 0;
 }
 .top .icon {
@@ -117,16 +117,25 @@ h2 {
 }
 .top-left__email--actual-email {
   text-decoration: underline;
-  color: #0776B2;
+  color: #0776b2;
 }
 .top-right {
   display: flex;
   justify-content: flex-start;
 }
 .top-right a {
-  color: #0776B2;
+  color: #0776b2;
   font-size: 26px;
   margin-left: 16px;
+}
+
+.scrolledNav {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -161,13 +170,20 @@ nav ul li a {
   font-size: 18px;
 }
 nav ul li a:hover {
-  color: #0776B2;
+  color: #0776b2;
 }
 nav ul li .active {
-  color: #0776B2;
+  color: #0776b2;
 }
 nav .down-lists {
   display: none;
+  padding-top: 15px;
+}
+nav .down-lists div {
+  width: 25px;
+  height: 3px;
+  background: #0776b2;
+  margin: 5px;
 }
 
 .banner .swiper-container {
@@ -210,14 +226,13 @@ nav .down-lists {
   margin-left: 10px;
 }
 .courses .filter .btn:hover {
-  background: #0776B2;
+  background: #0776b2;
   color: #fff;
   cursor: pointer;
 }
 .courses .filter .act {
-  background: #0776B2;
+  background: #0776b2;
   color: #fff;
-  margin-left: 0;
 }
 .courses .filter .act:hover {
   cursor: default;
@@ -229,14 +244,19 @@ nav .down-lists {
   max-width: 30%;
   background: #fff;
   padding: 0px;
+  position: relative;
 }
 .courses .cards > div .for-service-description {
   margin: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .courses .cards > div .for-service-description h4 {
   width: 300px;
   margin: auto;
-  border: 1px solid #0776B2;
+  -webkit-box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
   border-radius: 300px;
   margin-top: -55px;
   position: relative;
@@ -244,6 +264,30 @@ nav .down-lists {
   z-index: 100;
   height: 40px;
   line-height: 40px;
+}
+.courses .cards > div .for-service-description p {
+  text-align: left;
+}
+.courses .cards > div .for-service-description span, .courses .cards > div .for-service-description small {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.courses .cards > div .for-service-description small {
+  margin-top: 0px;
+}
+.courses .cards > div strong {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  background: #0776b2;
+  color: #fff;
+  width: 40%;
+  height: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  line-height: 50px;
 }
 .courses .cards > div img {
   width: 100%;
@@ -283,7 +327,7 @@ nav .down-lists {
   background-color: #fff;
   width: 130px;
   border-radius: 50%;
-  border: 6px solid #0776B2;
+  border: 6px solid #0776b2;
   height: 130px;
   display: flex;
   align-items: center;
@@ -326,11 +370,9 @@ nav .down-lists {
 }
 
 .testimonials {
-  padding: 30px 20px 40px 20px;
-  max-width: 100%;
+  padding: 30px 70px 40px 70px;
 }
 .testimonials .swiper-second-container {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   margin-top: 40px;
@@ -338,25 +380,23 @@ nav .down-lists {
 .testimonials .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 500px;
   -webkit-box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.75);
 }
 .testimonials .swiper-slide .swiper-cards {
   display: flex;
-  max-width: 100%;
   position: relative;
 }
 .testimonials .swiper-slide .swiper-cards > div {
-  padding: 120px 50px 45px 80px;
+  padding: 120px 30px 45px 60px;
 }
 .testimonials .swiper-slide .swiper-cards > div p {
   font-size: 18px;
 }
 .testimonials .swiper-slide .swiper-cards > div h4 {
   font-size: 26px;
-  color: #0776B2;
+  color: #0776b2;
   font-weight: 400;
   margin-top: 20px;
 }
@@ -369,7 +409,6 @@ nav .down-lists {
   width: 80px;
   height: 80px;
   border-radius: 80px;
-  background: red;
   position: absolute;
   top: -35px;
   left: 45%;
@@ -391,7 +430,7 @@ nav .down-lists {
   top: auto;
   left: auto;
   right: 0%;
-  bottom: 15%;
+  bottom: 0%;
 }
 
 .clients {
@@ -413,7 +452,6 @@ nav .down-lists {
 .clients .clients-listing .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   /* Center slide text vertically */
   display: flex;
   -webkit-box-pack: center;
@@ -441,7 +479,7 @@ nav .down-lists {
   justify-content: space-between;
 }
 .contact .form-box .company-information {
-  width: 30%;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
 }
@@ -528,7 +566,7 @@ nav .down-lists {
   margin-top: 8px;
 }
 .footer-middleDiv button:hover {
-  color: #0776B2;
+  color: #0776b2;
   cursor: pointer;
 }
 
@@ -558,19 +596,43 @@ nav .down-lists {
   }
   nav .down-lists {
     display: block;
-    padding: 0 15px;
   }
 
-  .mobile-nav .center {
-    flex-direction: column;
-  }
   .mobile-nav ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    background: rgba(7, 118, 178, 0.7);
+    width: 100%;
+    z-index: 100;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation: animateNav 0.3s ease-in;
   }
-  .mobile-nav ul li:not(:last-child) {
-    border-bottom: 1px solid #848484;
+  .mobile-nav ul li {
+    margin-left: 0;
+  }
+  .mobile-nav ul li a {
+    color: #fff;
+    padding-left: 10px;
+  }
+  .mobile-nav ul li a:hover, .mobile-nav ul li a:active {
+    background: #fff;
+    columns: #0776b2;
   }
 
+  @keyframes animateNav {
+    0% {
+      transform: translateY(-30%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
   .banner .swiper-slide h1 {
     font-size: 38px;
     max-width: 100%;
@@ -591,9 +653,12 @@ nav .down-lists {
     width: 80px;
     height: 80px;
     font-size: 30px;
-    border: 4px solid #0776B2;
+    border: 4px solid #0776b2;
   }
 
+  .testimonials {
+    padding: 30px 20px 40px 20px;
+  }
   .testimonials .swiper-slide .swiper-cards > div {
     padding: 80px 50px 35px 70px;
   }
@@ -657,7 +722,7 @@ nav .down-lists {
     align-items: center;
   }
   .contact .form-box .company-information {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
