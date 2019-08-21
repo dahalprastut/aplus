@@ -197,6 +197,124 @@ nav{
 
 // services ends
 
+// popular start
+
+.popular{
+    background: url(../images/banner_1.jpg) center center no-repeat fixed;
+    padding: 30px 20px 40px 20px;
+    max-width:100%;
+    background-size: cover; 
+
+    h2{
+        color: $over-color;
+    }
+
+    .classes{
+        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        
+        .box{
+            margin-top: 40px;
+            margin-right: 60px;
+            display: flex;
+            flex-direction: column;
+            max-width: 25%;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+         
+
+            .font-awesome{
+                text-align: center;
+                font-size: 80px;
+                color: $primary-color;
+                position: relative;
+                transition: 0.5s;
+                -webkit-transition: 0.5s;
+
+                .fa-wordpress{
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                
+                    filter:grayscale(100%);
+                    -webkit-filter:grayscale(100%);
+                }
+
+                &::before{
+                    content:'';
+                    background: $primary-color;
+                    width: 20px;
+                    height: 3px;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    transition: 0.5s;
+                }
+            }
+
+            .class-description{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                h5{
+                    text-align:center;
+                    font-size: 28px;
+                    font-weight: 400;
+                    color: $over-color;
+                }
+
+                .first-div{
+                    color: $over-color;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .left, .right{
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+
+                    .right{
+                        margin-left: 10px;
+                    }
+                    span{
+                        margin-right:8px;
+                        margin-left: 8px;
+                    }
+                   
+                }
+
+                .read-more{
+                    text-align: center;
+                    margin-top: 20px;
+                    a{
+                        border-color: $over-color;
+                        color: $over-color;
+                    }
+                }
+            }
+
+          
+
+            &:hover .font-awesome .fa-wordpress{
+                filter:grayscale(0);
+                -webkit-filter:grayscale(0%);
+                
+            }
+            &:hover .font-awesome::before{
+                content: '';
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+// popular ends
+
 
 // courses start
 .courses{
@@ -274,8 +392,10 @@ nav{
 
                 small{
                     margin-top: 0px;
+                    
                 }
             }
+
 
             strong{
                 position: absolute;

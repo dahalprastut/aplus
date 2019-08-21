@@ -152,6 +152,19 @@
 
     // services ends
 
+    // popular start
+    .popular{
+        .classes{
+            display: flex;
+            justify-content: center;
+            .box{
+                max-width: 45%;
+            }
+        }
+    }
+
+    // popular ends
+
     // courses start
     .hide-sell{
         display: none;
@@ -247,6 +260,28 @@
     }
 
     // banner ends
+
+    // popular starts
+
+    .popular{
+        .classes{
+            display: flex;
+            flex-direction: column;
+
+            .box{
+                align-items: center;
+                margin-right: 0;
+                max-width: 100%;
+                .class-description{
+                    h5{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    // popular ends
 
 
     // about starts

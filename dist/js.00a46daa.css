@@ -220,6 +220,98 @@ nav .down-lists div {
   padding: 30px 20px 60px 20px;
 }
 
+.popular {
+  background: url(/banner_1.eb76f141.jpg) center center no-repeat fixed;
+  padding: 30px 20px 40px 20px;
+  max-width: 100%;
+  background-size: cover;
+}
+.popular h2 {
+  color: #fff;
+}
+.popular .classes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popular .classes .box {
+  margin-top: 40px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.popular .classes .box .font-awesome {
+  text-align: center;
+  font-size: 80px;
+  color: #0776b2;
+  position: relative;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.popular .classes .box .font-awesome .fa-wordpress {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.popular .classes .box .font-awesome::before {
+  content: "";
+  background: #0776b2;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: 0.5s;
+}
+.popular .classes .box .class-description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.popular .classes .box .class-description h5 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+}
+.popular .classes .box .class-description .first-div {
+  color: #fff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.popular .classes .box .class-description .first-div .left, .popular .classes .box .class-description .first-div .right {
+  display: flex;
+  justify-content: flex-start;
+}
+.popular .classes .box .class-description .first-div .right {
+  margin-left: 10px;
+}
+.popular .classes .box .class-description .first-div span {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.popular .classes .box .class-description .read-more {
+  text-align: center;
+  margin-top: 20px;
+}
+.popular .classes .box .class-description .read-more a {
+  border-color: #fff;
+  color: #fff;
+}
+.popular .classes .box:hover .font-awesome .fa-wordpress {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0%);
+}
+.popular .classes .box:hover .font-awesome::before {
+  content: "";
+  width: 100%;
+}
+
 .courses {
   padding: 30px 20px 40px 20px;
   background: #ececee;
@@ -660,6 +752,14 @@ nav .down-lists div {
     margin-left: 0;
   }
 
+  .popular .classes {
+    display: flex;
+    justify-content: center;
+  }
+  .popular .classes .box {
+    max-width: 45%;
+  }
+
   .hide-sell {
     display: none;
   }
@@ -695,6 +795,19 @@ nav .down-lists div {
   .banner .swiper-slide h1 {
     text-align: left;
     font-size: 22px;
+  }
+
+  .popular .classes {
+    display: flex;
+    flex-direction: column;
+  }
+  .popular .classes .box {
+    align-items: center;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .popular .classes .box .class-description h5 {
+    font-size: 20px;
   }
 
   .about {

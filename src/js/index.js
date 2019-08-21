@@ -6,6 +6,7 @@ import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.css';
 
 
+
 import * as variables from './variables';
 
 
@@ -354,3 +355,5 @@ var swiper = new Swiper('.swiper-clients-container', {
 // for clients end
 
 //   for swiper ends
+
+
